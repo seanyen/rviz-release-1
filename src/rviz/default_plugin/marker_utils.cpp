@@ -45,6 +45,10 @@
 #include <rviz/validate_quaternions.h>
 #include <rviz/validate_floats.h>
 
+#if defined(_WIN32) && defined(DELETE)
+  #undef DELETE
+#endif
+
 namespace rviz
 {
 MarkerBase*
