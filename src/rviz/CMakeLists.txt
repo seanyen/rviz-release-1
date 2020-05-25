@@ -1,6 +1,7 @@
 find_package(yaml-cpp REQUIRED)
 
 include_directories(${YAML_CPP_INCLUDE_DIR})
+add_compile_definitions(YAML_CPP_DLL)
 
 if(UNIX AND NOT APPLE)
   find_package(X11 REQUIRED)
