@@ -155,7 +155,11 @@ void RenderSystem::setupDummyWindowId()
 
 void RenderSystem::loadOgrePlugins()
 {
+#ifdef _WIN32
+  std::string plugin_prefix = "";
+#else
   std::string plugin_prefix = get_ogre_plugin_path() + "/";
+#endif
 #ifdef Q_OS_MAC
   plugin_prefix += "lib";
 #endif
